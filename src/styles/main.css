@@ -1,0 +1,482 @@
+*,
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background-color: #bf1722;
+  color: white;
+  padding: 8px;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+header {
+  background-color: #1B262C;
+  color: #0F4C75;
+  text-align: center;
+}
+
+.appbar-brand {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.appbar-drawer {
+  background-color: #1B262C;
+  border: 0;
+  font-weight: bold;
+  font-size: 30px;
+  min-height: 44px;
+  min-width: 44px;
+  padding: 10px;
+  text-align: center;
+}
+
+.appbar-navigation {
+  text-align: center;
+}
+
+.nav-item {
+  display: inline-block;
+  padding: 10px 0;
+}
+
+.nav-item a {
+  background-color: #BBE1FA;
+  border-radius: 10px;
+  color: #0F4C75;
+  display: inline-block;
+  font-weight: bold;
+  margin: 0 10px;
+  padding: 1.3em;
+  text-decoration: none;
+}
+
+.nav-item a:hover {
+  background-color: #0F4C75;
+  color: #BBE1FA;
+}
+
+.hero-element {
+  width: 100%;
+}
+
+.hero {
+  width: 100%;
+}
+
+.title {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.restaurant-item {
+  border: 1px solid black;
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+  margin: 20px 10px;
+  padding: 20px;
+  height: 90%;
+}
+
+.restaurant-item a {
+  color: black;
+  text-decoration: none;
+}
+
+.restaurant-item .restaurant-name {
+  text-align: center;
+}
+
+.restaurant-item img {
+  border-radius: 20px;
+  margin: 20px 0;
+  width: 100%;
+}
+
+.restaurant-item .restaurant-detail {
+  display: flex;
+  justify-content: space-between;
+}
+
+.restaurant .restaurant-name,
+.menu-restaurant,
+.customer-reviews,
+.add-customer-review {
+  margin: 10px 0;
+  text-align: center;
+}
+
+.restaurant-container {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.restaurant-container img {
+  width: 100%;
+}
+
+.restaurant-container-detail {
+  margin: 20px 10%;
+  text-align: justify;
+}
+
+.restaurant-menu-container {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 10%;
+}
+
+.customer-reviews-container {
+  margin: 20px 10%;
+}
+
+.customer-review-container {
+  border: 1px solid black;
+  border-radius: 10px;
+  margin: 20px 0;
+  padding: 10px;
+}
+
+.customer-review-container .customer-review-name {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.customer-review-container .customer-review-date {
+  color: grey;
+  font-size: 14px;
+}
+
+.customer-review-container .customer-review-review {
+  font-size: 16px;
+}
+
+.add-review-container {
+  border: 1px solid black;
+  border-radius: 20px;
+  margin: 0 10%;
+  padding: 20px;
+}
+
+.add-review-container label {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.add-review-container input,
+.add-review-container textarea {
+  border-radius: 10px;
+  font-size: 16px;
+  margin: 10px 0;
+  min-height: 44px;
+  min-width: 44px;
+  padding: 10px;
+  width: 100%;
+}
+
+.add-review-container button {
+  background-color: white;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px;
+  text-align: center;
+  width: 100%;
+}
+
+footer {
+  background-color: #1B262C;
+  color: #0F4C75;
+  font-size: 20px;
+  margin-top: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+.like {
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1B262C;
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  border-radius: 50%;
+  border: 0;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+#loading {
+  font-size: 20px;
+  text-align: center;
+}
+
+.status {
+  text-align: center;
+}
+
+.display {
+  display: none;
+}
+
+#modal {
+  background-color: rgba(0, 0, 0, 0.2);
+  height: 100%;
+  left: 0;
+  top: 0;
+  overflow: auto;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+
+.modal-container {
+  background-color: white;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10% auto;
+  height: 80%;
+  width: 80%;
+}
+
+.modal-container div {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.modal-container button {
+  background-color: #0F4C75;
+  border: none;
+  border-radius: 20px;
+  color: #BBE1FA;
+  font-size: 20px;
+  padding: 20px;
+}
+
+.modal-container button:hover {
+  background-color: #BBE1FA;
+  color: #0F4C75;
+}
+
+.skeleton {
+  user-select: none;
+  background-color: #EEEEEE;
+  color: #EEEEEE;
+}
+
+@media screen and (max-width: 320px) {
+  .appbar-brand {
+    font-size: 20px;
+  }
+
+  .title {
+    font-size: 25px;
+  }
+
+  .restaurant-item h2 {
+    font-size: 18px;
+  }
+
+  .restaurant-item h3 {
+    font-size: 16px;
+  }
+
+  .restaurant-item p {
+    font-size: 14px;
+  }
+
+  footer {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 499px) {
+  .appbar-navigation {
+    z-index: 10;
+    background-color: #1B262C;
+    color: #0F4C75;
+    width: 100%;
+    position: absolute;
+    -webkit-transform: translate(-100%, 0);
+    transform: translate(-100%, 0);
+    transition: transform 1s ease;
+  }
+
+  .open {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+
+  .nav-item {
+    display: list-item;
+    border-bottom: 1px solid black;
+    width: 100%;
+    text-align: left;
+  }
+
+  .nav-item a {
+    background-color: #1B262C;
+  }
+
+  .restaurant-menu-container {
+    flex-direction: column;
+  }
+
+  .restaurant-menu-foods,
+  .restaurant-menu-drinks {
+    margin: 10px 0;
+  }
+}
+
+@media screen and (min-width: 499px) {
+  .appbar-drawer {
+    display: none;
+  }
+
+  .customer-reviews-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px;
+  }
+}
+
+
+
+@media screen and (min-width: 700px) {
+  restaurant-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  #loading {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  .customer-reviews-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (min-width: 750px) {
+  .appbar {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .appbar-brand {
+    padding-left: 10px;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .title {
+    margin: 20px auto;
+  }
+
+  .appbar,
+  restaurant-list {
+    margin: 0 auto;
+    max-width: 1500px;
+  }
+
+  .restaurant {
+    margin: 0 auto;
+    max-width: 1800px;
+  }
+
+  .restaurant-container {
+    align-items: center;
+    display: grid;
+    column-gap: 20px;
+    grid-template-columns: 1fr 1fr;
+    margin: 20px 10%;
+  }
+
+  .restaurant-name {
+    font-size: 28px;
+  }
+
+  .menu-restaurant,
+  .restaurant-menu-foods h4,
+  .restaurant-menu-drinks h4,
+  .customer-reviews,
+  .add-customer-review {
+    font-size: 24px;
+  }
+
+  .restaurant-container-detail p,
+  .restaurant-menu-foods p,
+  .restaurant-menu-drinks p,
+  .customer-review-review {
+    font-size: 20px;
+  }
+
+  .restaurant-container-detail {
+    margin: 0;
+  }
+
+  .customer-reviews-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .customer-review-name {
+    font-size: 22px;
+  }
+
+  .customer-review-date {
+    font-size: 18px;
+  }
+
+  .input label {
+    font-size: 22px;
+  }
+
+  .input input,
+  .input textarea {
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  restaurant-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  #loading {
+    grid-column-start: 1;
+    grid-column-end: 4;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero-element {
+    margin: 0 auto;
+    max-width: 1500px;
+  }
+}
